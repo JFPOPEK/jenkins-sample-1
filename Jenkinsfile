@@ -10,10 +10,14 @@ node () {
 	stage ('APP-IC - Build') {
  			// Maven build step
 	withMaven { 
- 			if(isUnix()) {
+ 			
+		
+			if(isUnix()) {
  				sh "mvn clean package " 
+				sh "mvn sonar:sonar"
 			} else { 
  				bat "mvn clean package " 
+				bat "mvn sonar:sonar "
 			} 
  		} 
 	}
