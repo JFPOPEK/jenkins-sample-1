@@ -15,4 +15,20 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <repositories>
+    <repository>
+      <id>maven-group</id>
+      <url>http://localhost:8081/repository/maven-public/</url>
+    </repository>
+  </repositories>    
+  <distributionManagement>
+    <snapshotRepository>
+      <id>nexus-snapshot</id>
+      <url>http://localhost:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>      
+     <repository>
+      <id>maven-releases</id>
+      <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
 </project>
